@@ -1,50 +1,96 @@
-# Welcome to your Expo app 👋
+# Movie App (React Native + Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile application for browsing trending movies using TMDB API.
 
-## Get started
+## Features
 
-1. Install dependencies
+- User authentication with Firebase
+- Trending movies display with card view
+- Detailed movie information
+- Click counter for movie interactions
+- State management using Zustand
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- React Native
+- Expo
+- NativeWind (TailwindCSS)
+- Firebase Authentication
+- TMDB API
+- Zustand
+- Expo Router
 
-   ```bash
-    npx expo start
-   ```
+## Prerequisites
 
-In the output, you'll find options to open the app in a
+- Node.js
+- npm/yarn
+- Expo CLI
+- Firebase account
+- TMDB API key
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Screenshot of Home page
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+<img src="/assets/images/homeSS.jpg" alt="App Screenshot" width="300" />
 
-## Get a fresh project
+## Installation
 
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/ris-jeewa/XUNI
+
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+```
 
-## Learn more
+3. Configure environment variables:
+   - Create a `.env` file in root directory
+   - Add your API keys:
+```
+TMDB_API_KEY=your_tmdb_api_key
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Configure Firebase:
+   - Create a Firebase project
+   - Add Firebase configuration in `firebaseConfig.js`
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Running the App
 
-## Join the community
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+## Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+XUNI/
+├── app/
+│   ├── _layout.js
+│   ├── home.js     
+├── components/
+│   ├── MovieStore.js   
+├── constants/
+└── firebaseConfig.js
+```
+
+## Features Implementation
+
+### Authentication
+- Firebase email/password authentication
+- Protected routes
+- User session management
+
+### Movie Browsing
+- Trending movies display
+- Movie cards with image, title, rating
+- Click tracking for user interactions
+
+### Movie Details
+- Detailed movie information
+- High-resolution images
+- Ratings
+
+Git hub repository: https://github.com/ris-jeewa/XUNI
+
