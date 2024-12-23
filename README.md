@@ -1,4 +1,4 @@
-# Movie App (React Native + Expo)
+# XUNI - Movie App (React Native + Expo)
 
 A mobile application for browsing trending movies using TMDB API.
 
