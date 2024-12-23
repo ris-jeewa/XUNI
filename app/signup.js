@@ -31,7 +31,6 @@ export default function SignUp() {
   const profileRef = useRef("");
 
   const handleSignUp = async () => {
-    console.log(emailRef.current, passwordRef.current);
     if (
       !emailRef.current ||
       !passwordRef.current ||
@@ -46,7 +45,6 @@ export default function SignUp() {
     let response = await register(emailRef.current, passwordRef.current, usernameRef.current, profileRef.current);
     setLoading(false);
 
-    console.log("got results ", response);
     if (!response.success) {
       Alert.alert("Sign Up", response.msg);
       // return;

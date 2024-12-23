@@ -28,7 +28,6 @@ const { login } = useAuth();
   const passwordRef = useRef("");
 
   const handleSignin = async () => {
-    console.log(emailRef.current, passwordRef.current);
     if (!emailRef.current || !passwordRef.current) {
       Alert.alert("Sign In", "Please fill all fields!");
       return;

@@ -6,6 +6,8 @@ const apiBaseUrl = 'https://api.themoviedb.org/3';
 const trendingMovies = `${apiBaseUrl}/trending/movie/day?api_key=${TMDB_API_KEY}`;
 const popularMovies = `${apiBaseUrl}/movie/popular?api_key=${TMDB_API_KEY}`;
 const upcomingMovies = `${apiBaseUrl}/movie/upcoming?api_key=${TMDB_API_KEY}`;
+const topratedMovies = `${apiBaseUrl}/movie/top_rated?api_key=${TMDB_API_KEY}`;
+
 
 
 const apiCall = async (endpoint,params) => {
@@ -33,5 +35,9 @@ export const fetchPopularMovies = () => {
 }
 
 export const fetchUpcomingMovies = () => {
+    return apiCall(upcomingMovies);
+}
+
+export const fetchTopRatedMovies = () => {
     return apiCall(upcomingMovies);
 }

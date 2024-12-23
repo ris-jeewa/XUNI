@@ -25,7 +25,6 @@ export const AuthContextProvider = ({ children }) => {
           ...userData, // Includes profileUrl, username, etc.
         });
         setIsAuthenticated(true);
-        console.log("user data ", userData);
       } else {
         setIsAuthenticated(false);
         setUser(null);
@@ -87,7 +86,6 @@ const getUserData = async (userId) => {
         password
       );
 
-      console.log("use res ", response?.user);
       await setDoc(doc(db, "users", response?.user?.uid), {
         username,
         profileUrl,
