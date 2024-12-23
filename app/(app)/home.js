@@ -23,7 +23,7 @@ import {
 export default function Home() {
   const { logout, user } = useAuth();
   const [movies, setMovies] = useState([]);
-  const { clickCount, incrementClick } = useMovieStore();
+  const { clickCount, incrementClick,resetClick } = useMovieStore();
   const [selectedCategory, setSelectedCategory] = useState("Popular");
 
   useEffect(() => {
@@ -49,6 +49,7 @@ export default function Home() {
   };
 
   const handleLogout = async () => {
+    resetClick();
     await logout();
   };
 
