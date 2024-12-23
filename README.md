@@ -23,7 +23,7 @@ A mobile application for browsing trending movies using TMDB API.
 ## Prerequisites
 
 - Node.js
-- npm/yarn
+- npm
 - Expo CLI
 - Firebase account
 - TMDB API key
